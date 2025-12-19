@@ -1,19 +1,14 @@
-# Architecture Overview — Terraform Leadership Path
+# Architecture Overview — Vault Leadership Path
 
-This repository represents the **Infrastructure Construction Domain**.
+This repository represents the **Security & Secrets Domain**.
 
 ## Responsibilities
-- Infrastructure provisioning
-- Resource lifecycle management
-- State management
-- Modular IaC design
+- Secrets lifecycle management
+- Encryption and signing
+- Identity-based access
+- Policy enforcement
 
-## Out of scope
-- Secrets management
-- Encryption
-- Identity brokering
-
-> Security controls are provided externally via Vault.
+> Infrastructure provisioning is assumed to be handled externally via Terraform.
 
 ## Companion repository
-https://github.com/S3curethecloud/vault-leadership-path
+https://github.com/S3curethecloud/terraform-leadership-path
