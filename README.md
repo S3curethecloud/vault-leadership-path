@@ -1,38 +1,89 @@
-vault-leadership-path/
-├── README.md
-├── assets/
-│   ├── stc-vault-banner.png
-│   ├── third-eye-scenes/
-│   └── diagrams/
-├── volume-1-vault-foundations/
-│   ├── lesson-01-what-is-vault.md
-│   ├── lesson-02-auth-methods.md
-│   ├── lesson-03-secret-engines.md
-│   ├── lesson-04-policies-tokens.md
-│   ├── lesson-05-transit-engine.md
-│   ├── flowcharts/
-│   └── labs/
-│       ├── lab-enable-kvv2/
-│       ├── lab-transit-signing/
-│       └── lab-pki-issue-certs/
-├── volume-2-vault-associate-exam/
-│   ├── exam-objectives.md
-│   ├── objectives-to-labs-map.md
-│   ├── 180-anki-cards.txt
-│   ├── practice-exams/
-├── volume-3-enterprise-vault-architecture/
-│   ├── lesson-seal-unseal.md
-│   ├── lesson-ha-clustering.md
-│   ├── lesson-performance-replication.md
-│   ├── lesson-autounseal-cloudkms.md
-├── volume-4-terraform-vault-integration/
-│   ├── lesson-terraform-auth.md
-│   ├── lesson-configure-secrets-engines.md
-│   ├── lesson-dynamic-creds.md
-│   ├── labs/
-│       ├── lab-terraform-configure-transit/
-│       ├── lab-terraform-manage-policies/
-│       ├── lab-terraform-create-dynamic-aws-creds/
-├── anki/
-│   ├── vault-foundations.txt
-│   ├── vault-associate.txt
+# Vault Leadership Path  
+### SecureTheCloud Academy — Secrets, Identity & Encryption
+
+**Version:** 2025  
+**Author:** SecureTheCloud (Ola)
+
+---
+
+## Overview
+
+This repository represents the **Security and Secrets domain** of the SecureTheCloud Academy.
+
+It focuses on **HashiCorp Vault** as the central system for:
+
+- Secrets management
+- Encryption services
+- Identity-based access
+- Token lifecycle management
+- Zero-trust security workflows
+
+Infrastructure provisioning is **assumed** to be handled externally via Terraform.
+
+👉 Infrastructure reference repository:  
+https://github.com/S3curethecloud/terraform-leadership-path
+
+---
+
+## Architectural Philosophy
+
+> Terraform creates infrastructure.  
+> Vault secures infrastructure.
+
+Vault is treated as:
+
+- The system of record for secrets
+- The authority for encryption and signing
+- The enforcement point for identity and policy
+- A security boundary, not a convenience tool
+
+Terraform is used **inside Vault workflows**, not the other way around.
+
+---
+
+## Repository Structure
+volume-1-vault-foundations/ → Core Vault concepts
+volume-2-vault-associate-exam/ → Certification alignment
+volume-3-enterprise-vault-design/ → HA, seal, replication
+volume-4-terraform-vault-integration/
+anki/
+
+text
+
+---
+
+## Terraform’s Role in This Repository
+
+Terraform is used to:
+
+- Configure Vault auth methods
+- Manage Vault policies
+- Enable secrets engines
+- Automate Vault configuration safely
+
+Terraform is **not taught here from scratch**.
+
+Foundational Terraform knowledge is assumed and sourced from:
+
+👉 https://github.com/S3curethecloud/terraform-leadership-path
+
+---
+
+## Who This Repository Is For
+
+- Security engineers
+- Platform engineers
+- Cloud architects
+- DevSecOps professionals
+- Anyone pursuing Vault Associate certification
+
+---
+
+## Outcome
+
+Completing this repository prepares you to:
+
+- Operate Vault securely
+- Design secret lifecycles
+- Implement encryption-as-a-service
+- Integrate Vault into Terraform-driven environments
