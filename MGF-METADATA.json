@@ -1,0 +1,9 @@
+{
+  "stc_standard": "STC-AS v1.0",
+  "domain": "security",
+  "primary_tool": "vault",
+  "companion_repo": "terraform-leadership-path",
+  "certification": ["Vault Associate"],
+  "mgf_ingest": true,
+  "terraform_used_for": "vault_automation"
+}
